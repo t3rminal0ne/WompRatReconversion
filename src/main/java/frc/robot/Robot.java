@@ -49,6 +49,47 @@ public class Robot extends TimedRobot {
   Compressor compressor = new Compressor(0);
 
 
+  // Initializing all of the JOYSTICK BUTTONS in a confusing manner until we learn how to 
+  // do it in a non-confusing manner
+
+  boolean leftTrigger = leftStick.getRawButton(0);
+  boolean leftThumbMain = leftStick.getRawButton(1);
+  boolean leftThumbLeft = leftStick.getRawButton(2);
+  boolean leftThumbRight = leftStick.getRawButton(3);
+  boolean leftRightArrayTR = leftStick.getRawButton(4);
+  boolean leftRightArrayTM = leftStick.getRawButton(5);
+  boolean leftRightArrayTL = leftStick.getRawButton(6);
+  boolean leftRightArrayBL = leftStick.getRawButton(7);
+  boolean leftRightArrayBM = leftStick.getRawButton(8);
+  boolean leftRightArrayBR = leftStick.getRawButton(9);
+  boolean leftLeftArrayTL = leftStick.getRawButton(10);
+  boolean leftLeftArrayTM = leftStick.getRawButton(11);
+  boolean leftLeftArrayTR = leftStick.getRawButton(12);
+  boolean leftLeftArrayBR = leftStick.getRawButton(13);
+  boolean leftLeftArrayBM = leftStick.getRawButton(14);
+  boolean leftLeftArrayBL = leftStick.getRawButton(15);
+
+  //Right joystick buttons:
+  boolean rightTrigger = rightStick.getRawButton(0);
+  boolean rightThumbMain = rightStick.getRawButton(1);
+  boolean rightThumbLeft = rightStick.getRawButton(2);
+  boolean rightThumbRight = rightStick.getRawButton(3);
+  boolean rightLeftArrayTL = rightStick.getRawButton(4);
+  boolean rightLeftArrayTM = rightStick.getRawButton(5);
+  boolean rightLeftArrayTR = rightStick.getRawButton(6);
+  boolean rightLeftArrayBR = rightStick.getRawButton(7);
+  boolean rightLeftArrayBM = rightStick.getRawButton(8);
+  boolean rightLeftArrayBL = rightStick.getRawButton(9);
+  boolean rightRightArrayTR = rightStick.getRawButton(10);
+  boolean rightRightArrayTM = rightStick.getRawButton(11);
+  boolean rightRightArrayTL = rightStick.getRawButton(12);
+  boolean rightRightArrayBL = rightStick.getRawButton(13);
+  boolean rightRightArrayBM = rightStick.getRawButton(14);
+  boolean rightRightArrayBR = rightStick.getRawButton(15);
+
+  // Declaring GLOBAL VARS as each one comes into play
+  boolean shooterSideIsForward = false;
+
   @Override
   public void robotInit() {
     // Setting up twoMotorDrive
@@ -111,6 +152,27 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     twoMotorDrive.tankDrive(leftStick.getY(), rightStick.getY());
+
+    // PHASE 2 CODE TO TEST:
+
+    // if (rightRightArrayBM) {
+    //   // (Limelight code)
+    // } else {
+    //   // (Network table stuff)
+
+    //   if (leftThumbMain) {
+    //     // Aim with limelight
+    //   } else {
+    //     // (Network table stuff)
+
+    //     // this determines which way the robot is oriented
+    //     if (shooterSideIsForward) {
+    //       twoMotorDrive.tankDrive(rightStick.getY(), -leftStick.getY());
+    //     } else {
+    //       twoMotorDrive.tankDrive(-rightStick.getY(), leftStick.getY());
+    //     }
+    //   }
+    // }
   }
 
   @Override
