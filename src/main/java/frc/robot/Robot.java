@@ -173,7 +173,19 @@ public class Robot extends TimedRobot {
     //     }
     //   }
     // }
-  }
+
+  // PHASE 3 CODE TO TEST:
+
+  //   if (rightThumbLeft) {
+  //     shooterSideIsForward = false;
+  //   } else {
+  //     if (rightThumbRight) {
+  //       shooterSideIsForward = true;
+  //     } else {
+
+  //     }
+  //   }
+  // }
 
   @Override
   public void testInit() {
